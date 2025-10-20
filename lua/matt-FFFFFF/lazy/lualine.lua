@@ -7,6 +7,7 @@ return {
     },
     sections = {
       lualine_b = { 'branch', 'diff', 'diagnostics' },
+      lualine_z = {},
     }
   }
 }

@@ -31,7 +31,6 @@ return {
       formatters_by_ft = {
         lua = { "stylua" },
         go = { "gofmt", "goimports" },
-        rust = { "rustfmt" },
         javascript = { "prettier" },
         typescript = { "prettier" },
         javascriptreact = { "prettier" },
@@ -67,35 +66,19 @@ return {
             capabilities = capabilities,
             on_attach = function(client, bufnr)
               if client.server_capabilities.inlayHintProvider then
-                vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
+                vim.lsp.inlay_hint.enable(true, bufnr)
               end
             end,
           }
         end,
 
-        zls = function()
-          local lspconfig = require("lspconfig")
-          lspconfig.zls.setup({
-            root_dir = lspconfig.util.root_pattern(".git", "build.zig", "zls.json"),
-            settings = {
-              zls = {
-                enable_inlay_hints = true,
-                enable_snippets = true,
-                warn_style = true,
-              },
-            },
-          })
-          vim.g.zig_fmt_parse_errors = 0
-          vim.g.zig_fmt_autosave = 0
-
-        end,
         ["lua_ls"] = function()
           local lspconfig = require("lspconfig")
           lspconfig.lua_ls.setup {
             capabilities = capabilities,
             on_attach = function(client, bufnr)
               if client.server_capabilities.inlayHintProvider then
-                vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
+                vim.lsp.inlay_hint.enable(true, bufnr)
               end
             end,
             settings = {
@@ -125,18 +108,6 @@ return {
             }
           }
         end,
-        ["tailwindcss"] = function()
-          local lspconfig = require("lspconfig")
-          lspconfig.tailwindcss.setup({
-            capabilities = capabilities,
-            filetypes = { "html", "css", "scss", "javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "svelte", "heex" },
-            on_attach = function(client, bufnr)
-              if client.server_capabilities.inlayHintProvider then
-                vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
-              end
-            end,
-          })
-        end,
         ["gopls"] = function()
           local lspconfig = require("lspconfig")
           lspconfig.gopls.setup {
@@ -156,7 +127,7 @@ return {
             },
             on_attach = function(client, bufnr)
               if client.server_capabilities.inlayHintProvider then
-                vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
+                vim.lsp.inlay_hint.enable(true, bufnr)
               end
             end,
           }
@@ -192,7 +163,7 @@ return {
       virtual_text = {
         spacing = 4,
         prefix = '●',
-        severity = { min = vim.diagnostic.severity.WARN },
+        severity = { min = vim.diagnostic.severity.HINT },
       },
       float = {
         focusable = false,
