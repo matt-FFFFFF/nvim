@@ -9,9 +9,9 @@ vim.keymap.set('n', '<leader>ff', 'gg=G')
 -- format paragraph but return cursor to original position
 vim.keymap.set('n', '=ap', 'ma=ap`a')
 -- paste over currently selected text without yanking it
-vim.keymap.set("x", "<leader>p", "[[\"_dP]]")
+vim.keymap.set("x", "<leader>p", [["_dP]])
 -- delete into void register
-vim.keymap.set({ "n", "v" }, "<leader>d", "[[\"_d]]")
+vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 -- yank to system clipboard
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
