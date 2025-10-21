@@ -15,6 +15,11 @@ vim.keymap.set({ "n", "v" }, "<leader>d", "[[\"_d]]")
 -- yank to system clipboard
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
-
 -- Q is noop
 vim.keymap.set("n", "Q", "<nop>")
+-- center search results
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
+-- move visual block up and down
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
