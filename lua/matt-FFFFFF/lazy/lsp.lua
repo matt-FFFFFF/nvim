@@ -135,7 +135,7 @@ return {
       }
     })
 
-        local cmp_select = { behavior = cmp.SelectBehavior.Select }
+    local cmp_select = { behavior = cmp.SelectBehavior.Select }
 
     cmp.setup({
       snippet = {
@@ -162,7 +162,7 @@ return {
       -- update_in_insert = true,
       virtual_text = {
         spacing = 4,
-        prefix = '●',
+        prefix = '󰜋',
         severity = { min = vim.diagnostic.severity.HINT },
       },
       float = {

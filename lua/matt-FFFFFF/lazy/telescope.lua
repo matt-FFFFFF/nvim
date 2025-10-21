@@ -23,5 +23,6 @@ return {
         end)
         vim.keymap.set('n', '<leader>ps', builtin.live_grep, { desc = 'Telescope live grep' })
         vim.keymap.set('n', '<leader>vh', builtin.help_tags, {})
+        vim.keymap.set('n', '<leader>pp', builtin.treesitter, {})
       end
     }
