@@ -1,7 +1,19 @@
 return {
 	"stevearc/conform.nvim",
+	dependencies = {
+		"williamboman/mason.nvim",
+		"WhoIsSethDaniel/mason-tool-installer.nvim",
+	},
 	opts = {},
 	config = function()
+		require("mason-tool-installer").setup({
+			ensure_installed = {
+				"stylua",
+				"goimports",
+				"prettierd",
+			},
+		})
+
 		require("conform").setup({
 			format_on_save = {
 				timeout_ms = 5000,
