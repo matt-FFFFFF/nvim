@@ -1,5 +1,3 @@
-vim.opt.guicursor = ""
-
 vim.g.have_nerd_font = true
 
 vim.opt.nu = true
@@ -15,7 +13,8 @@ vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 
-vim.opt.smartindent = true
+vim.opt.autoindent = false
+vim.opt.smartindent = false
 
 vim.opt.wrap = false
 

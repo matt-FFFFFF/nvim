@@ -11,6 +11,7 @@ local root_files = {
 
 return {
 	"neovim/nvim-lspconfig",
+	lazy = true,
 	dependencies = {
 		"williamboman/mason.nvim",
 		"williamboman/mason-lspconfig.nvim",
@@ -84,6 +85,8 @@ return {
 				},
 			},
 		})
+
+		vim.lsp.enable("ms-terraform-lsp")
 
 		-- add autocmd to enable inlay hints when lsp attaches to a buffer
 		vim.api.nvim_create_autocmd("LspAttach", {
