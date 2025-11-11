@@ -1,5 +1,5 @@
 vim.g.mapleader = " "
-vim.g.maplocalleader = ","
+vim.g.maplocalleader = "\\"
 -- pv to open netrw
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 -- center screen when navigating

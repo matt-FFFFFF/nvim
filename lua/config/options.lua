@@ -42,3 +42,12 @@ vim.opt.eol = true
 vim.opt.fixeol = true
 
 vim.opt.ff = "unix"
+
+vim.filetype.add({
+	extension = {
+		tf = "terraform",
+		tofu = "terraform",
+	},
+})
+
+vim.g.lazyvim_cmp = "nvim-cmp"

@@ -1,1 +1,1 @@
-require("matt-FFFFFF")
+require("config.lazy")
