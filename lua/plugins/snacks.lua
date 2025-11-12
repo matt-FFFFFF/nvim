@@ -3,7 +3,10 @@ return {
 		"snacks.nvim",
 		opts = {
 			indent = {
-				enable = false,
+				enabled = false,
+			},
+			scope = {
+				enabled = true,
 			},
 			scroll = {
 				enabled = false,
