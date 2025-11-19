@@ -12,20 +12,20 @@ vim.keymap.set("n", "N", "Nzzzv", { desc = "Previous search result (centered)" }
 -- move visual block up and down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move visual block down" })
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move visual block up" })
-vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz", { desc = "Next quickfix item (centered)" })
-vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz", { desc = "Previous quickfix item (centered)" })
+vim.keymap.set("n", "<C-S-K>", "<cmd>cnext<CR>zz", { desc = "Next quickfix item (centered)" })
+vim.keymap.set("n", "<C-S-J>", "<cmd>cprev<CR>zz", { desc = "Previous quickfix item (centered)" })
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz", { desc = "Next location list item (centered)" })
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz", { desc = "Previous location list item (centered)" })
 -- replace word under cursor
 vim.keymap.set(
-	"n",
-	"<leader>S",
-	[[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
-	{ desc = "Replace word under cursor" }
+  "n",
+  "<leader>S",
+  [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
+  { desc = "Replace word under cursor" }
 )
--- make current file executable
-vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 -- buffer navigation
 vim.keymap.set("n", "<S-h>", "<cmd>bprevious<CR>", { desc = "Previous buffer" })
 vim.keymap.set("n", "<S-l>", "<cmd>bnext<CR>", { desc = "Next buffer" })
-vim.keymap.set("n", "<leader:w>bd", "<cmd>bdelete<CR>", { desc = "Delete buffer" })
+-- up/down is centered
+vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Scroll down (centered)" })
+vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Scroll up (centered)" })
