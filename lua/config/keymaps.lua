@@ -29,3 +29,10 @@ vim.keymap.set("n", "<S-l>", "<cmd>bnext<CR>", { desc = "Next buffer" })
 -- up/down is centered
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Scroll down (centered)" })
 vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Scroll up (centered)" })
+
+-- Delete all diagnostics
+vim.keymap.set("n", "<leader>xD", function()
+  vim.diagnostic.reset()
+  vim.cmd("LspRestart")
+  vim.cmd("edit")
+end, { desc = "Delete all diagnostics and restart LSP" })
