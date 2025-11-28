@@ -1,9 +1,9 @@
 vim.keymap.set("n", "<leader>bd", "<cmd>bdelete<CR>", { desc = "Delete current buffer" })
 -- yank to system clipboard
-vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank to system clipboard" })
-vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "Yank line to system clipboard" })
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank to system clipboard (selection)" })
+vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "Yank line to system clipboard (whole line)" })
 -- delete to void register
-vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]], { desc = "Delete to void register" })
+vim.keymap.set({ "n", "v" }, "<leader>D", [["_d]], { desc = "Delete to void register" })
 -- Q is noop
 vim.keymap.set("n", "Q", "<nop>", { desc = "Disable Q (ex mode)" })
 -- center search results
