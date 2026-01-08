@@ -9,6 +9,8 @@ vim.keymap.set("n", "Q", "<nop>", { desc = "Disable Q (ex mode)" })
 -- center search results
 vim.keymap.set("n", "n", "nzzzv", { desc = "Next search result (centered)" })
 vim.keymap.set("n", "N", "Nzzzv", { desc = "Previous search result (centered)" })
+-- center goto tag
+vim.keymap.set("n", "<C-]>", "<C-]>zz", { desc = "Go to tag (centered)" })
 -- move visual block up and down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move visual block down" })
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move visual block up" })
