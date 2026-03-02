@@ -3,10 +3,10 @@ vim.g.have_nerd_font = true
 vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.opt.guicursor = {
-	"n-v-c:block", -- Normal, Visual, Command mode cursor as a block
-	"i:block", -- Insert mode cursor as a block
-	"r:blinkon1", -- Replace mode cursor blinking
-	"a:blinkon1", -- Active mode blinking
+  "n-v-c:block", -- Normal, Visual, Command mode cursor as a block
+  "i:block", -- Insert mode cursor as a block
+  "r:blinkon1", -- Replace mode cursor blinking
+  "a:blinkon1", -- Active mode blinking
 }
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
@@ -44,10 +44,10 @@ vim.opt.fixeol = true
 vim.opt.ff = "unix"
 
 vim.filetype.add({
-	extension = {
-		tf = "terraform",
-		tofu = "terraform",
-	},
+  extension = {
+    tf = "terraform",
+    tofu = "terraform",
+  },
 })
 
 vim.g.ai_cmp = false

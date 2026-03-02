@@ -35,6 +35,6 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Scroll up (centered)" })
 -- Delete all diagnostics
 vim.keymap.set("n", "<leader>xD", function()
   vim.diagnostic.reset()
-  vim.cmd("LspRestart")
+  vim.cmd("lsp restart")
   vim.cmd("edit")
 end, { desc = "Delete all diagnostics and restart LSP" })
