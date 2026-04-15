@@ -51,4 +51,4 @@ vim.filetype.add({
 })
 
 vim.g.ai_cmp = false
-vim.g.lazyvim_cmp = "blink"
+vim.g.lazyvim_cmp = "blink.cmp"
